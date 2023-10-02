@@ -1,0 +1,10 @@
+{
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.useInlineCompletions": true,
+  "editor.inlineSuggest.showToolbar": "always",
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on"
+  }
+}
