@@ -5,11 +5,11 @@ import logo from '../../public/logo-rs.png';
 const Header = () => {
   return (
     <header className="header">
-      <div className="container">
+      <div className="logo-links">
         <div className="logo">
           <Link href="/">
             <Image src={logo} alt="repo-search-logo" width={60} height={60} />
-            CodeSRG
+            <span> Repo Search</span>
           </Link>
         </div>
         <div className="links">
