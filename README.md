@@ -11,8 +11,8 @@
 
 # Repo Search
 
-Repo Search is [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). <br>
-The app displays GitHub Repo data and integrates search functionality.
+Repo Search is a [Next.js](https://nextjs.org/) project. <br>
+The app displays GitHub Repo data and integrates search functionality. <br>
 The aim of this project is to test drive the experimental Next.js 13.3 app router.
 
 ## Initial Phase
