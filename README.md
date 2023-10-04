@@ -9,7 +9,7 @@
   </p>
 </div>
 
-# Repo Search
+# Next-Repo
 
 Next-Repo is a [Next.js](https://nextjs.org/) project. <br>
 The app displays GitHub Repo data and integrates search functionality. <br>
