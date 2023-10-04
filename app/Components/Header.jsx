@@ -9,13 +9,12 @@ const Header = () => {
         <div className="logo">
           <Link href="/">
             <Image src={logo} alt="repo-search-logo" width={60} height={60} />
-            <span> Next Repo</span>
+            <span> Next-Repo</span>
           </Link>
         </div>
         <div className="links">
+          <Link href="/code/repos"> Repos</Link>
           <Link href="/about"> About</Link>
-          <Link href="/about/team"> The Team</Link>
-          <Link href="/code/repos"> Code</Link>
         </div>
       </div>
     </header>
