@@ -36,7 +36,6 @@ const Repo = async ({ name }) => {
           <span>{repo.watchers.count}</span>
         </div>
       </div>
-      end from repo component
     </>
   );
 };
