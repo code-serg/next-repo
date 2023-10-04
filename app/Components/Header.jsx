@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../public/logo-rs.png';
+import logo from '../../public/logo-nr.png';
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
         <div className="logo">
           <Link href="/">
             <Image src={logo} alt="repo-search-logo" width={60} height={60} />
-            <span> Repo Search</span>
+            <span> Next Repo</span>
           </Link>
         </div>
         <div className="links">
