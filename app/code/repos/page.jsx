@@ -2,18 +2,45 @@ import Link from 'next/link';
 import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa';
 
 async function fetchRepos() {
-  const response = await fetch('https://api.github.com/users/code-serg/repos', {
-    next: {
-      revalidate: 60,
-    },
-  });
-  const repos = await response.json();
-  return repos;
+  try {
+    const response = await fetch(
+      'https://api.github.com/users/code-serg/repos',
+      {
+        headers: {
+          Authorization: `token ${process.env.GITHUB_TOKEN}`,
+        },
+        next: {
+          revalidate: 60,
+        },
+      }
+    );
+
+    const data = await response.json();
+
+    // Check if the data is an error object
+    if (data.message && data.documentation_url) {
+      throw new Error(data.message);
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Error fetching repos data:', error.message);
+    return { error: error.message };
+  }
 }
 
 const ReposPage = async () => {
   const repos = await fetchRepos();
-  // console.log(repos)
+
+  if (repos.error) {
+    return (
+      <div className="error-container">
+        <h2>Error Fetching Repositories</h2>
+        <p>{repos.error}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="repos-container">
       <h2>Repositories</h2>
